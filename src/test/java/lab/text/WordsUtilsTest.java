@@ -1,8 +1,9 @@
-package lab.file;
+package lab.text;
 
 import org.junit.Assert;
 import org.junit.Test;
 import java.io.File;
+import java.util.Map;
 
 public class WordsUtilsTest
 {
@@ -20,5 +21,12 @@ public class WordsUtilsTest
     {
         double avrLength = WordsUtils.averageWords(file);
         Assert.assertEquals(4, avrLength, 0.00001);
+    }
+
+    @Test
+    public void mostPopularWord()
+    {
+        long max = WordsUtils.mostPopularWord("text text text java web");
+        Assert.assertEquals(3, max);
     }
 }

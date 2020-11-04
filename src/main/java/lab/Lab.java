@@ -2,7 +2,7 @@ package lab;
 
 import lab.employee.Employee;
 import lab.employee.EmployeeUtils;
-import lab.file.WordsUtils;
+import lab.text.WordsUtils;
 
 import java.io.File;
 import java.util.Arrays;
