@@ -1,13 +1,11 @@
 package lab;
 
-import lab.alarm_radio_watch.AlarmImpl;
-import lab.alarm_radio_watch.RadioAlarm;
-import lab.alarm_radio_watch.RadioImpl;
-import lab.draw.Circle;
-import lab.draw.Graphics;
-import lab.draw.Panel;
-import lab.draw.Point;
-import lombok.SneakyThrows;
+import lab.employee.Employee;
+import lab.employee.EmployeeUtils;
+import lab.text.WordsUtils;
+
+import java.io.File;
+import java.util.Arrays;
 
 public class Lab
 {
