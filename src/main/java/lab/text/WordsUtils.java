@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 public class WordsUtils
 {
     @SneakyThrows
-    public static int culculatorWords(File file)
+    public static int calculatorWords(File file)
     {
         return (int)new BufferedReader(new FileReader(file)).lines().flatMap(words -> Arrays.stream(words.split(" "))).count();
     }

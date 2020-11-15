@@ -3,7 +3,6 @@ package lab.text;
 import org.junit.Assert;
 import org.junit.Test;
 import java.io.File;
-import java.util.Map;
 
 public class WordsUtilsTest
 {
@@ -12,7 +11,7 @@ public class WordsUtilsTest
     @Test
     public void countWords()
     {
-        int amount = WordsUtils.culculatorWords(file);
+        int amount = WordsUtils.calculatorWords(file);
         Assert.assertEquals(6, amount);
     }
 
