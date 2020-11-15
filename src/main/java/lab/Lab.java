@@ -1,6 +1,7 @@
 package lab;
 
 import lab.alarm_radio_watch.RadioAlarm;
+import lab.irobot.IRobot;
 import lombok.SneakyThrows;
 
 
@@ -26,5 +27,8 @@ public class Lab
 
         RadioAlarm radio = new RadioAlarm();
         radio.c();
+
+        IRobot robot = new IRobot();
+        robot.cleanRoom();
     }
 }
