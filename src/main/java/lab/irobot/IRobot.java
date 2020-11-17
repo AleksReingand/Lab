@@ -7,6 +7,12 @@ public class IRobot
     @InjectByType
     Speaker speaker;
 
+    @Init
+    public void init()
+    {
+        System.out.println(cleaner.getClass().getName());
+    }
+
     public void cleanRoom()
     {
         speaker.msg("started...");

@@ -2,8 +2,10 @@ package lab.irobot;
 
 
 import lombok.SneakyThrows;
+import org.reflections.ReflectionUtils;
 import org.reflections.Reflections;
 
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -37,8 +39,20 @@ public class ObjectFactory
         clazz = resolveImpl(clazz);
         T t = create(clazz);
         configure(t);
+        initStart(t);
 
         return t;
+    }
+
+    @SneakyThrows
+    private <T> void initStart(T t)
+    {
+        Class<?> clazz = t.getClass();
+        Set<Method> initMethods = ReflectionUtils.getAllMethods(clazz, method -> method.isAnnotationPresent(Init.class));
+        for(Method initMethod : initMethods)
+        {
+            initMethod.invoke(t);
+        }
     }
 
     private <T> void configure(T t)
