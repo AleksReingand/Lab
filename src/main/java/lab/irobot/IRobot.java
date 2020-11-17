@@ -2,13 +2,15 @@ package lab.irobot;
 
 public class IRobot
 {
-    Cleaner cleaner = ObjectFactory.getInstance().createObject(Cleaner.class);
-    Speaker workingSpeaker = ObjectFactory.getInstance().createObject(Speaker.class);
+    @InjectByType
+    Cleaner cleaner;
+    @InjectByType
+    Speaker speaker;
 
     public void cleanRoom()
     {
-        workingSpeaker.msg("started...");
+        speaker.msg("started...");
         cleaner.clean();
-        workingSpeaker.msg("finished...");
+        speaker.msg("finished...");
     }
 }

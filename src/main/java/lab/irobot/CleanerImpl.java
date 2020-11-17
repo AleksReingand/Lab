@@ -1,14 +1,16 @@
 package lab.irobot;
 
-import lombok.SneakyThrows;
-
 public class CleanerImpl implements Cleaner
 {
+    @InjectRandomInt(min=3, max=7)
+    private int repeat;
+
     @Override
-    @SneakyThrows
     public void clean()
     {
-        System.out.println("working....");
-        Thread.sleep(2000);
+        for(int idx = 0; idx < repeat; idx++)
+        {
+            System.out.println("working....");
+        }
     }
 }

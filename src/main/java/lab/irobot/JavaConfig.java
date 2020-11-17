@@ -13,7 +13,6 @@ public class JavaConfig implements Config
         ifc2ImplClass.put(Cleaner.class, CleanerImpl.class);
     }
 
-
     @Override
     public <T> Class<T> getImplClass(Class<T> clazz)
     {
