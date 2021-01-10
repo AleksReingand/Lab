@@ -180,16 +180,7 @@ public class HandlerData
                 }
                 else
                 {
-                    PersonDto person = PersonDto.builder()
-                            .personId(0)
-                            .policyId(0)
-                            .status(PolicyStatusEnum.ACTIVE)
-                            .firstName(entry.getKey().getFirstName())
-                            .lastName(entry.getKey().getLastName())
-                            .gender(entry.getKey().getGender())
-                            .birthday(entry.getKey().getBirthday()).build();
-
-                    addPersonToInsuranceDetails(person, token);
+                    addPersonToInsuranceDetails(FactoryDto.createPersonDto(entry.getKey()), token);
                 }
             }
             else
